@@ -1,0 +1,24 @@
+---
+kind: pipeline
+type: ssh
+name: deploy_dev
+
+server:
+  host: biw.yjgopotty.com
+  user: deploy
+  ssh_key:
+    from_secret: be_deploy_key
+
+clone:
+  disable: true
+
+steps:
+  - name: deploy
+    commands:
+      - cd /home/deploy/Testing
+      - git pull origin develop
+
+trigger:
+  branch:
+    - develop
+

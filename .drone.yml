@@ -16,7 +16,7 @@ steps:
   - name: deploy
     commands:
       - cd /home/deploy/Testing
-      - git pull origin develop
+      - git pull origin master
 
 trigger:
   branch:

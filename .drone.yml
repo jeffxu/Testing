@@ -7,7 +7,7 @@ server:
   host: biw.yjgopotty.com
   user: deploy
   ssh_key:
-    from_secret: be_deploy_key
+    from_secret: fe_deploy_key
 
 clone:
   disable: true
